@@ -12,3 +12,16 @@
 # [ ] 50번째 손님 (소요시간 : 16분)
 
 # 총 탑승 승객 : 2분
+
+from random import *
+count = 0
+for visitor in range(1, 51):
+    time = randint(5, 50)
+    if 5 <= time < 16:
+        print("[0] ", end="")
+        count += 1
+    else:
+        print("[ ] ", end="")
+    print(f"{visitor}번째 손님 (소요시간 : {time}분)")
+
+print(f"\n총 탑승 승객 : {count}분")
